@@ -29,3 +29,24 @@ Before you start building out the application, examine the current code and comp
 - Manage component state using the `useState` hook.
 - Keep components modular and reusable.
 - Remove unnecessary console logs and commented-out code before submission.
+
+
+Code Updated: Oct 12, 2026
+
+=============
+   UPDATES
+=============
+**App.jsx:**
+
+Added code for joke functionality by implementing new state variables for joke and loading.
+implemented useEffect to display initial joke on page load by calling a newly added fetchJoke function that sets laoding state to true while it fetches the joke from an API and updates the joke state once data is retrieved and resets loading state back to is initial state. function includes a .catch for error handling. Passed new props to JokeDisplay and fetchJoke function to FetchButton.
+
+**FetchButton.jsx:**
+
+Added event listener to button to invoke fetchJoke function upon button click.
+passed fetchjoke function as prop to button function.
+
+**JokeDisplay.jsx:**
+
+Passed joke and loading as props to display function. Applied conditional logic to <div> to display loading message while data is retireved and to display joke otherwise.
+
